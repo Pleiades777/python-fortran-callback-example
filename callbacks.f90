@@ -41,8 +41,8 @@ contains
   subroutine use_callback(manager,size,arr) bind(c)
 
     type(mgr)::manager
-    integer(c_int)::size
-    real(c_double)::arr
+    integer(c_int), value::size
+    real(c_double)::arr(size)
     procedure(callback_signature), pointer::callback
 
     call c_f_procpointer(manager%callback, callback)
