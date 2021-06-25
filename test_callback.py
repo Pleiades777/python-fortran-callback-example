@@ -98,7 +98,8 @@ def modify_array(size,ptr):
     arr=ptr_to_array(ptr,[size])
 
     # Add 1 to array
-    arr=arr+1
+    # (note we operate on a slice to ensure that we modify the data in-place)
+    arr[:]+=1
 
 def test_callback():
 
