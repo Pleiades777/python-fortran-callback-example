@@ -12,7 +12,7 @@ ffi=FFI()
 ffi.cdef("""
 
 /* Function pointer for callback */
-typedef void (*callback_t)(int,double*)
+typedef void (*callback_t)(int,double*);
 
 /* Struct to hold callback */
 typedef struct mgr{
@@ -20,10 +20,10 @@ typedef struct mgr{
 } mgr;
 
 /* Function to register callback */
-void register_callback(mgr*,callback_t)
+void register_callback(mgr*,callback_t);
 
 /* Function to use callback */
-void use_callback(mgr*,int,double*)
+void use_callback(mgr*,int,double*);
 """)
 
 import os
