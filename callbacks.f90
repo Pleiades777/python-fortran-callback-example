@@ -45,8 +45,10 @@ contains
     real(c_double)::arr(size)
     procedure(callback_signature), pointer::callback
 
+    ! Convert C function pointer to a Fortran procedure pointer
     call c_f_procpointer(manager%callback, callback)
 
+    ! Call the callback
     call callback(size,arr)
 
   end subroutine use_callback
