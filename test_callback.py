@@ -120,7 +120,7 @@ def test_callback():
     lib.register_callback(mgr,modify_array)
 
     # Call a routine that uses the callback
-    lib.use_callback(mgr,len(a),a)
+    lib.use_callback(mgr,len(a),a_ptr)
 
     # Check that the callback did what we expected
     assert np.all(a==1)
