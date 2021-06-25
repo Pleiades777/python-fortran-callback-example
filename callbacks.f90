@@ -31,7 +31,7 @@ contains
 
     ! Register a callback by storing it in mgr
 
-    type(mgr), intent(inout), pointer::manager
+    type(mgr), intent(inout)::manager
     type(c_funptr), intent(in), value::callback
 
     manager%callback=callback
@@ -40,7 +40,7 @@ contains
 
   subroutine use_callback(manager,size,arr) bind(c)
 
-    type(mgr), pointer::manager
+    type(mgr)::manager
     integer(c_int)::size
     real(c_double)::arr
     procedure(callback_signature), pointer::callback
