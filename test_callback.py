@@ -83,7 +83,7 @@ def ptr_to_array(ptr,shape,**kwargs):
           .reshape(shape, **kwargs)
     return a
 
-@ffi.callback("void(*)((int,double*))")
+@ffi.callback("void(*)(int,double*)")
 def modify_array(size,ptr):
 
     """
