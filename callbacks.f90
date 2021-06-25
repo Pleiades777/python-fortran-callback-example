@@ -19,7 +19,7 @@ module callbacks
        integer(c_int), value::size
            !! Size of array
 
-       real(c_double)::arr
+       real(c_double)::arr(size)
            !! Array data
 
      end subroutine callback_signature
