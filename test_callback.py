@@ -124,3 +124,6 @@ def test_callback():
 
     # Check that the callback did what we expected
     assert np.all(a==1)
+
+if __name__=='__main__':
+    test_callback()
